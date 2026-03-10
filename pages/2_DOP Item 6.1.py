@@ -11,4 +11,4 @@ st.write(
     devem atender às seguintes condições:"""
 )
 
-st.image("13.1_rfid.PNG", caption="Print do ATO 14448")
+st.image("images/13.1_rfid.PNG", caption="Print do ATO 14448")
