@@ -14,7 +14,7 @@ st.write(
     5.725 - 5.850 MHz devem atender aos limites definidos na Tabela V."""
 )
 
-st.image("13.1_rfid.PNG", caption="Print do ATO 14448")
+st.image("images/13.1_rfid.PNG", caption="Print do ATO 14448")
 
 # --- User Inputs ---
 col1, col2, col3 = st.columns(3) # Organize inputs into two columns
@@ -31,11 +31,11 @@ if st.button ("Calcular"):
 
 # --- Descobrindo o fator por década ---
     if freq_op >= 30:
-        st.image("decada_sup_30MHz.PNG", caption="Print do ATO 237")
+        st.image("images/decada_sup_30mhz.png", caption="Print do ATO 237")
         decada = 20
         st.write (f"O valor do fator de extrapolação para este caso é de: {decada} [dB/década]")
     else:
-        st.image("decada_inf_30MHz.PNG", caption="Print do ATO 237")
+        st.image("images/decada_inf_30mhz.png", caption="Print do ATO 237")
         decada = 40
         st.write (f"O valor do fator de extrapolação para este caso é de: {decada} [dB/década]")
     
