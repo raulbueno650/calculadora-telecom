@@ -5,7 +5,7 @@ import pandas as pd
 
 # Configuração da página
 st.set_page_config(page_title="RFID Item 13.1 - ATO 14448", page_icon="🔢")
-st.sidebar.header("new-modelo-side")
+st.sidebar.header("RFID Item 13.1 - ATO 14448 - Tabela V")
 
 st.markdown('<span style="color:gold; font-size: 48px">📚</span> <span style="font-size: 48px; font-weight: bold">RFID Item 13.1 - ATO 14448</span>', unsafe_allow_html=True)
 st.write(
