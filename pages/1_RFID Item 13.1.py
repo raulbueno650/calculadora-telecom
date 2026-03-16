@@ -1,4 +1,6 @@
 import streamlit as st
+import streamlit.components.v1 as components
+
 # import numpy as np
 import math
 import pandas as pd
@@ -176,6 +178,23 @@ with tab2:
     - {E_medido_extrapolado}, **[dBμV/m]**
     - {E_medido_extrapoaldo_linear}, **[μV/m]**
     """)
+    
+    #Botao para para copiar o resultado da intensidade de campo extrapolado para distância da norma em linear [μV/m]
+    #15/03 lembrar só de dar um jeito se substirui o ponto pela virgula.
+    components.html(f"""
+    <button 
+    style="
+    padding:10px 16px;
+    background-color:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;"
+    onclick="navigator.clipboard.writeText('{E_medido_extrapoaldo_linear}')">
+    📋 Copiar resultado
+    </button>
+    """, height=60) 
 
 
 
