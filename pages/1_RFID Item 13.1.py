@@ -172,15 +172,16 @@ with tab2:
     E_medido_extrapolado = E_medido - extrapolacao
     #Cálculo da IC extrapolada para distancia da norma convertida em linear [μV/m]
     E_medido_extrapolado_linear = math.pow (10,(E_medido_extrapolado/20))
+    #Já que no CCT vai virgula em vez de ponto, vamos formatar o valor para o usuário.
+    E_medido_extrapolado_linear_formatado = str(E_medido_extrapoaldo_linear).replace(".", ",")
 
     st.write(f"""     
     A Intensidade de Campo medida convertida para a distância da norma é de:
     - {E_medido_extrapolado}, **[dBμV/m]**
-    - {E_medido_extrapoaldo_linear}, **[μV/m]**
+    - {E_medido_extrapolado_linear_formatado}, **[μV/m]**
     """)
     
     #Botao para para copiar o resultado da intensidade de campo extrapolado para distância da norma em linear [μV/m]
-    #15/03 lembrar só de dar um jeito se substirui o ponto pela virgula.
     components.html(f"""
     <button 
     style="
@@ -191,7 +192,7 @@ with tab2:
     border-radius:6px;
     cursor:pointer;
     font-size:16px;"
-    onclick="navigator.clipboard.writeText('{E_medido_extrapoaldo_linear}')">
+    onclick="navigator.clipboard.writeText('{E_medido_extrapolado_linear_formatado}')">
     📋 Copiar resultado
     </button>
     """, height=60) 
